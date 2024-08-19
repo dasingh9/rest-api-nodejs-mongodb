@@ -1,14 +1,10 @@
 'use strict';
 const Mongoose = require('mongoose');
 const uri = process.env.DB_URI;
-console.log("process.env.DB_URI=", uri);
-const mongooseOptions = {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-};
+console.log("process.env.DB_URI=", uri?.substr(0,10) + "***");
 
 //Connect to MongoDB
-Mongoose.connect(uri, mongooseOptions)
+Mongoose.connect(uri)
     .then(() => console.log('MongoDB Connected'))
     .catch(error => console.log('MongoDB Error: ' + error.message));
 
