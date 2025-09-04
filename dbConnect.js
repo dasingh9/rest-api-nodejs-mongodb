@@ -1,7 +1,7 @@
 'use strict';
 const Mongoose = require('mongoose');
 const uri = process.env.DB_URI;
-console.log("process.env.DB_URI=", uri?.substr(0,10) + "***");
+//console.log("process.env.DB_URI=", uri);
 
 //Connect to MongoDB
 Mongoose.connect(uri)
